@@ -1,0 +1,31 @@
+This is an integration project between hardware and software tools. It is an application for automatic face detection and tracking on video streams from surveillance cameras in public or commercial places. Face detection is a process, which is to analysis the input image and to determine the number, location, size, position and the orientation of face.
+
+Face detection is the base for face tracking and face recognition, whose results directly affect the process and accuracy of face recognition. This method has real-time detection speed and high detection accuracy.
+
+Application of OpenCV:
+The digital image of the face generated is a representation of a two-dimensional image as a finite set of digital values, which typically represent gray levels, colours, heights, opacities etc. The conversion of this huge amount of low level information into usable high level information is the subject of computer vision(CV). It deals with the development of the theoretical and algorithmic basis by which useful information about the 3D world can be automatically extracted.
+
+Application Of Arduino:
+ Arduino can sense the environment by receiving input from a variety of sensors and can affect its surroundings by controlling lights, motors, and other actuators. The microcontroller on the board is programmed using the Arduino programming language (based on Wiring) and the Arduino development environment (based on Processing). Arduino projects can be stand-alone or they can communicate with software running on a computer.
+
+Connections:
+SERVOS
+The yellow/signal wire for the pan (X axis) servo goes to digital pin 9.
+The yellow/signal wire for the tilt (y axis) servo goes to digital pin 10.
+The red/Vcc wires of both servos go to the Arduino's 5V pin.
+The black/GND wires of both servos go to Arduino's GND pin.
+
+WEBCAM
+The webcam's USB goes to the PC. The C++ code will identify it via a number representing the USB port its connected to. .
+
+ARDUINO
+The Arduino Uno is connected to the PC via USB. Take note of the COM port the USB is connected to. You can find the com port from the Arduino Tools/Serial Ports menu. You will see a check mark next to the active USB port. This is the com port that you will use in your C++ code to communicate with Arduino.
+
+The webcam sends video frames to OpenCV running on a PC. If OpenCV detects a face it will track it and calculate its center's X,Y coordinates. The coordinates are then passed on to the Arduino via a serial USB connection. The Arduino controls the movement of the webcam with the help of two pan/tilt servos, one servo for each X and Y co-ordinate to follow the detected face.
+
+Uses:
+Face detection is used in biometrics, often as a part of a facial recognition system.
+• It is also used in video surveillance, human computer interface and image database management.
+• Some recent digital cameras use face detection for autofocus .
+• Face detection is gaining the interest of marketers. A webcam can be integrated into a television and detect any face that walks by.
+• The system then calculates the race, gender, and age range of the face. Once the information is collected, a series of advertisements can be played that is
